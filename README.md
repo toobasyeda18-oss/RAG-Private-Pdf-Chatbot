@@ -1,8 +1,9 @@
 # Private PDF Chatbot
+<video controls src="RAG Project Demo.mp4" title="Title"></video>
 
 A fully local RAG (Retrieval-Augmented Generation) application. Upload a PDF, ask questions in plain English, and get answers that cite the exact pages they came from. Embeddings, vector search and the language model all run on your own machine, so your documents never leave it.
 
-![Chat interface](docs/chat.png)
+![Chat interface](private-pdf-chatbot/docs/chat.png.png)
 
 ## Why I built it
 
@@ -110,7 +111,7 @@ docker-compose exec api python evaluate.py --fast   # skip the judge
 
 Every run is appended to `eval/results.json`. The **System Metrics** tab shows the latest run and a history of all runs, so different models and settings (for example query rewriting on versus off) can be compared side by side.
 
-![System Metrics tab](docs/metrics.png)
+![System Metrics tab](private-pdf-chatbot/docs/metrics.png.png)
 
 ## Engineering notes
 
