@@ -1,0 +1,57 @@
+[
+  {
+    "question": "What are the types of research?",
+    "keywords": ["descriptive", "analytical"],
+    "in_document": true
+  },
+  {
+    "question": "What is descriptive research?",
+    "keywords": ["surveys", "fact-finding"],
+    "in_document": true
+  },
+  {
+    "question": "What is analytical research?",
+    "keywords": ["facts", "evaluation"],
+    "in_document": true
+  },
+  {
+    "question": "What is the difference between quantitative and qualitative research?",
+    "keywords": ["quantity", "quality"],
+    "in_document": true
+  },
+  {
+    "question": "What is the difference between applied and fundamental research?",
+    "keywords": ["immediate problem", "generalisations"],
+    "in_document": true
+  },
+  {
+    "question": "What is conceptual research?",
+    "keywords": ["abstract", "philosophers"],
+    "in_document": true
+  },
+  {
+    "question": "What are the objectives of research?",
+    "keywords": ["exploratory", "diagnostic"],
+    "in_document": true
+  },
+  {
+    "question": "What is this document about?",
+    "keywords": ["research"],
+    "in_document": true
+  },
+  {
+    "question": "Who won the cricket world cup?",
+    "keywords": [],
+    "in_document": false
+  },
+  {
+    "question": "What is the capital of France?",
+    "keywords": [],
+    "in_document": false
+  },
+  {
+    "question": "How do I bake a chocolate cake?",
+    "keywords": [],
+    "in_document": false
+  }
+]

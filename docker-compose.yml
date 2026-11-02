@@ -1,0 +1,38 @@
+services:
+  qdrant:
+    image: qdrant/qdrant
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+  api:
+    build: .
+    command: uvicorn api:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      QDRANT_URL: http://qdrant:6333
+      OLLAMA_URL: http://host.docker.internal:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2:3b}
+      USE_REWRITE: ${USE_REWRITE:-true}
+      MAX_ANSWER_TOKENS: ${MAX_ANSWER_TOKENS:-500}
+      CPU_ONLY: ${CPU_ONLY:-false}
+      NUM_CTX: ${NUM_CTX:-4096}
+    volumes:
+      - ./eval:/app/eval
+    depends_on:
+      - qdrant
+
+  ui:
+    build: .
+    command: streamlit run ui.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    environment:
+      API_URL: http://api:8000
+    depends_on:
+      - api
+
+volumes:
+  qdrant_data:
